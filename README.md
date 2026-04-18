@@ -1,3 +1,9 @@
+<div align="center">
+
+<img src="./assets/banner.svg" alt="ycenta" width="100%" />
+
+</div>
+
 ```
                           _        
   _   _  ___ ___ _ __ | |_ __ _ 
@@ -68,6 +74,18 @@
 | [Sticky App](https://github.com/ycenta/sticky-app) | A sticky notes desktop app |
 | [FocusFlow](https://github.com/ycenta/focusflow) | Productivity & focus tool |
 | [Among Us NDS](https://github.com/ycenta/amongus-nds-game) | Among Us homebrew on Nintendo DS |
+
+---
+
+### Playground
+
+<div align="center">
+
+[<img src="./assets/pixel-cat.svg" alt="Interactive pixel cat — click to play" width="280" />](./assets/pixel-cat.svg)
+
+*Click the cat to open the interactive version — hover each pixel!*
+
+</div>
 
 ---
 

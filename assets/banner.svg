@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="ycenta animated banner">
+  <defs>
+    <!-- Animated gradient background -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1b26">
+        <animate attributeName="stop-color"
+          values="#1a1b26;#24283b;#414868;#24283b;#1a1b26"
+          dur="12s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#414868">
+        <animate attributeName="stop-color"
+          values="#414868;#1a1b26;#24283b;#414868"
+          dur="12s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Text stroke style -->
+    <style>
+      .title {
+        font-family: "SF Mono", "Fira Code", Menlo, monospace;
+        font-size: 64px;
+        font-weight: 700;
+        fill: none;
+        stroke: #7aa2f7;
+        stroke-width: 1.2;
+        stroke-dasharray: 1400;
+        stroke-dashoffset: 1400;
+        animation: draw 4s ease-out forwards, fill 1s ease-out 3.5s forwards;
+      }
+      .sub {
+        font-family: "SF Mono", "Fira Code", Menlo, monospace;
+        font-size: 16px;
+        fill: #a9b1d6;
+        opacity: 0;
+        animation: fadeIn 1s ease-out 4s forwards;
+      }
+      .cursor {
+        font-family: "SF Mono", Menlo, monospace;
+        font-size: 16px;
+        fill: #bb9af7;
+        animation: blink 1s step-end infinite;
+      }
+      .star {
+        fill: #e0af68;
+        animation: twinkle 3s ease-in-out infinite;
+      }
+      .orbit {
+        transform-origin: 700px 100px;
+        animation: spin 8s linear infinite;
+      }
+
+      @keyframes draw {
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes fill {
+        to { fill: #7aa2f7; }
+      }
+      @keyframes fadeIn {
+        to { opacity: 1; }
+      }
+      @keyframes blink {
+        50% { opacity: 0; }
+      }
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.3; transform: scale(0.8); }
+        50%      { opacity: 1;   transform: scale(1.2); }
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="200" fill="url(#bgGrad)"/>
+
+  <!-- Twinkling stars -->
+  <g filter="url(#glow)">
+    <circle class="star" cx="60"  cy="40"  r="1.5" style="animation-delay: 0s"/>
+    <circle class="star" cx="120" cy="160" r="1"   style="animation-delay: 0.5s"/>
+    <circle class="star" cx="220" cy="30"  r="1.2" style="animation-delay: 1s"/>
+    <circle class="star" cx="380" cy="170" r="1"   style="animation-delay: 1.5s"/>
+    <circle class="star" cx="520" cy="25"  r="1.5" style="animation-delay: 2s"/>
+    <circle class="star" cx="620" cy="150" r="1"   style="animation-delay: 0.7s"/>
+    <circle class="star" cx="760" cy="45"  r="1.2" style="animation-delay: 1.3s"/>
+  </g>
+
+  <!-- Orbiting planet on the right -->
+  <g class="orbit">
+    <circle cx="760" cy="100" r="6" fill="#bb9af7" filter="url(#glow)"/>
+  </g>
+  <circle cx="700" cy="100" r="18" fill="#f7768e" filter="url(#glow)">
+    <animate attributeName="r" values="18;20;18" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Main text -->
+  <text class="title" x="40" y="110">&lt;ycenta/&gt;</text>
+  <text class="sub"   x="42" y="145">creative developer · maker · game dev<tspan class="cursor">_</tspan></text>
+</svg>
