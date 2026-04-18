@@ -4,15 +4,6 @@
 
 </div>
 
-```
-                          _        
-  _   _  ___ ___ _ __ | |_ __ _ 
- | | | |/ __/ _ \ '_ \| __/ _` |
- | |_| | (_|  __/ | | | || (_| |
-  \__, |\___\___|_| |_|\__\__,_|
-  |___/                          
-```
-
 <div align="center">
 
 **Creative Developer · Builder of Things · Maker at Heart**

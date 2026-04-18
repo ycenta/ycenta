@@ -1,108 +1,170 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-label="ycenta animated banner">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="800" height="280" role="img" aria-label="ycenta ASCII terminal banner">
   <defs>
-    <!-- Animated gradient background -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1a1b26">
-        <animate attributeName="stop-color"
-          values="#1a1b26;#24283b;#414868;#24283b;#1a1b26"
-          dur="12s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset="100%" stop-color="#414868">
-        <animate attributeName="stop-color"
-          values="#414868;#1a1b26;#24283b;#414868"
-          dur="12s" repeatCount="indefinite"/>
-      </stop>
-    </linearGradient>
-
-    <!-- Glow filter -->
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <!-- Text stroke style -->
     <style>
-      .title {
-        font-family: "SF Mono", "Fira Code", Menlo, monospace;
-        font-size: 64px;
+      /* =========================================================
+         CRT TERMINAL — ASCII ART BANNER
+         ========================================================= */
+
+      .screen { fill: #0d0f1a; }
+
+      /* ASCII art styling */
+      .ascii {
+        font-family: "SF Mono", "Fira Code", "Menlo", "Courier New", monospace;
+        font-size: 14px;
         font-weight: 700;
-        fill: none;
-        stroke: #7aa2f7;
-        stroke-width: 1.2;
-        stroke-dasharray: 1400;
-        stroke-dashoffset: 1400;
-        animation: draw 4s ease-out forwards, fill 1s ease-out 3.5s forwards;
-      }
-      .sub {
-        font-family: "SF Mono", "Fira Code", Menlo, monospace;
-        font-size: 16px;
-        fill: #a9b1d6;
-        opacity: 0;
-        animation: fadeIn 1s ease-out 4s forwards;
-      }
-      .cursor {
-        font-family: "SF Mono", Menlo, monospace;
-        font-size: 16px;
-        fill: #bb9af7;
-        animation: blink 1s step-end infinite;
-      }
-      .star {
-        fill: #e0af68;
-        animation: twinkle 3s ease-in-out infinite;
-      }
-      .orbit {
-        transform-origin: 700px 100px;
-        animation: spin 8s linear infinite;
+        fill: #9ece6a;
+        white-space: pre;
       }
 
-      @keyframes draw {
-        to { stroke-dashoffset: 0; }
+      /* Line-by-line reveal */
+      .r1 { animation: in 0.1s 0.10s linear both; }
+      .r2 { animation: in 0.1s 0.25s linear both; }
+      .r3 { animation: in 0.1s 0.40s linear both; }
+      .r4 { animation: in 0.1s 0.55s linear both; }
+      .r5 { animation: in 0.1s 0.70s linear both; }
+      .r6 { animation: in 0.1s 0.85s linear both; }
+      .r7 { animation: in 0.1s 1.00s linear both; }
+      .r8 { animation: in 0.1s 1.15s linear both; }
+      .r9 { animation: in 0.1s 1.30s linear both; }
+      @keyframes in {
+        from { opacity: 0; }
+        to   { opacity: 1; }
       }
-      @keyframes fill {
-        to { fill: #7aa2f7; }
+
+      /* Color cycle on the whole art */
+      .hue {
+        animation: hue 12s ease-in-out infinite;
       }
-      @keyframes fadeIn {
-        to { opacity: 1; }
+      @keyframes hue {
+        0%, 100% { fill: #9ece6a; }
+        33%      { fill: #7dcfff; }
+        66%      { fill: #bb9af7; }
       }
-      @keyframes blink {
-        50% { opacity: 0; }
+
+      /* CRT flicker */
+      .flicker { animation: flicker 0.12s infinite alternate; }
+      @keyframes flicker {
+        from { opacity: 0.93; }
+        to   { opacity: 1; }
       }
-      @keyframes twinkle {
-        0%, 100% { opacity: 0.3; transform: scale(0.8); }
-        50%      { opacity: 1;   transform: scale(1.2); }
+
+      /* Prompt text */
+      .prompt {
+        font-family: "SF Mono", Menlo, monospace;
+        font-size: 13px;
+        font-weight: 700;
+        opacity: 0;
+        animation: in 0.2s 0s linear forwards;
       }
-      @keyframes spin {
-        to { transform: rotate(360deg); }
+      .prompt-after {
+        animation: in 0.2s 1.45s linear forwards;
+        opacity: 0;
+      }
+
+      /* Blinking cursor */
+      .cursor {
+        fill: #9ece6a;
+        animation: blink 0.9s steps(1) infinite;
+      }
+      @keyframes blink { 50% { opacity: 0; } }
+
+      /* Floating pixel particles */
+      .pixel {
+        animation: rise 5s linear infinite;
+      }
+      @keyframes rise {
+        0%   { transform: translateY(0); opacity: 0; }
+        20%  { opacity: 1; }
+        100% { transform: translateY(-160px); opacity: 0; }
+      }
+
+      /* Horizontal glitch bar */
+      .glitch {
+        fill: #f7768e;
+        opacity: 0;
+        animation: glitch 7s ease-in-out infinite;
+      }
+      @keyframes glitch {
+        0%, 90%, 100% { transform: translateY(-10px); opacity: 0; }
+        91%           { transform: translateY(70px);  opacity: 0.5; }
+        93%           { transform: translateY(150px); opacity: 0.3; }
+        95%           { transform: translateY(220px); opacity: 0.5; }
+        97%           { transform: translateY(290px); opacity: 0; }
+      }
+
+      /* Scanline shift */
+      .scanlines {
+        opacity: 0.15;
+        animation: scan-shift 6s linear infinite;
+      }
+      @keyframes scan-shift {
+        from { transform: translateY(0); }
+        to   { transform: translateY(4px); }
       }
     </style>
+
+    <!-- Scanline pattern -->
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="2" fill="#000"/>
+    </pattern>
+
+    <!-- Vignette -->
+    <radialGradient id="vg" cx="50%" cy="50%" r="75%">
+      <stop offset="60%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.85"/>
+    </radialGradient>
   </defs>
 
   <!-- Background -->
-  <rect width="800" height="200" fill="url(#bgGrad)"/>
+  <rect class="screen" width="800" height="280"/>
 
-  <!-- Twinkling stars -->
-  <g filter="url(#glow)">
-    <circle class="star" cx="60"  cy="40"  r="1.5" style="animation-delay: 0s"/>
-    <circle class="star" cx="120" cy="160" r="1"   style="animation-delay: 0.5s"/>
-    <circle class="star" cx="220" cy="30"  r="1.2" style="animation-delay: 1s"/>
-    <circle class="star" cx="380" cy="170" r="1"   style="animation-delay: 1.5s"/>
-    <circle class="star" cx="520" cy="25"  r="1.5" style="animation-delay: 2s"/>
-    <circle class="star" cx="620" cy="150" r="1"   style="animation-delay: 0.7s"/>
-    <circle class="star" cx="760" cy="45"  r="1.2" style="animation-delay: 1.3s"/>
+  <!-- Floating pixels -->
+  <g>
+    <rect class="pixel" x="30"  y="260" width="3" height="3" fill="#7aa2f7" style="animation-delay: 0s"/>
+    <rect class="pixel" x="58"  y="260" width="2" height="2" fill="#bb9af7" style="animation-delay: 1.3s"/>
+    <rect class="pixel" x="18"  y="260" width="2" height="2" fill="#9ece6a" style="animation-delay: 2.5s"/>
+    <rect class="pixel" x="770" y="260" width="3" height="3" fill="#9ece6a" style="animation-delay: 0.6s"/>
+    <rect class="pixel" x="745" y="260" width="2" height="2" fill="#7dcfff" style="animation-delay: 2s"/>
+    <rect class="pixel" x="780" y="260" width="2" height="2" fill="#f7768e" style="animation-delay: 3.1s"/>
+    <rect class="pixel" x="400" y="260" width="2" height="2" fill="#7aa2f7" style="animation-delay: 1.8s"/>
+    <rect class="pixel" x="500" y="260" width="2" height="2" fill="#bb9af7" style="animation-delay: 3.5s"/>
   </g>
 
-  <!-- Orbiting planet on the right -->
-  <g class="orbit">
-    <circle cx="760" cy="100" r="6" fill="#bb9af7" filter="url(#glow)"/>
-  </g>
-  <circle cx="700" cy="100" r="18" fill="#f7768e" filter="url(#glow)">
-    <animate attributeName="r" values="18;20;18" dur="3s" repeatCount="indefinite"/>
-  </circle>
+  <!-- Glitch bar -->
+  <rect class="glitch" x="0" y="0" width="800" height="3"/>
 
-  <!-- Main text -->
-  <text class="title" x="40" y="110">&lt;ycenta/&gt;</text>
-  <text class="sub"   x="42" y="145">creative developer · maker · game dev<tspan class="cursor">_</tspan></text>
+  <!-- First prompt -->
+  <text class="prompt" x="30" y="38">
+    <tspan fill="#bb9af7">ycenta@dev</tspan><tspan fill="#565f89">:</tspan><tspan fill="#7aa2f7">~</tspan><tspan fill="#565f89">$</tspan><tspan fill="#c0caf5"> cat profile.txt</tspan>
+  </text>
+
+  <!-- ASCII art -->
+  <g class="flicker" transform="translate(30 70)">
+    <g class="hue">
+      <text class="ascii r1" x="0" y="0">╭──────────────────────────────────────────────────────────────────╮</text>
+      <text class="ascii r2" x="0" y="18">│                                                                  │</text>
+      <text class="ascii r3" x="0" y="36">│      __   _____ _____ _   _ _____  _    _                       │</text>
+      <text class="ascii r4" x="0" y="54">│      \ \ / / __| ____| \ | |_   _|/ \  | |                      │</text>
+      <text class="ascii r5" x="0" y="72">│       \ V / |   |  _| |  \| | | | / _ \ | |                      │</text>
+      <text class="ascii r6" x="0" y="90">│        | || |__ | |___| |\  | | |/ ___ \| |___                   │</text>
+      <text class="ascii r7" x="0" y="108">│        |_| \___||_____|_| \_| |_/_/   \_\_____|                  │</text>
+      <text class="ascii r8" x="0" y="126">│                                                                  │</text>
+      <text class="ascii r9" x="0" y="144">╰─── creative dev · apps · games · hardware · made in FR 🥖 ──────╯</text>
+    </g>
+  </g>
+
+  <!-- Second prompt with blinking cursor -->
+  <g transform="translate(30 250)">
+    <text class="prompt prompt-after">
+      <tspan fill="#bb9af7">ycenta@dev</tspan><tspan fill="#565f89">:</tspan><tspan fill="#7aa2f7">~</tspan><tspan fill="#565f89">$</tspan>
+    </text>
+    <rect class="cursor" x="100" y="-11" width="8" height="14">
+      <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.52;0.52" dur="1.65s" repeatCount="1" fill="freeze"/>
+    </rect>
+  </g>
+
+  <!-- Scanlines -->
+  <rect class="scanlines" width="800" height="280" fill="url(#scan)"/>
+  <!-- Vignette -->
+  <rect width="800" height="280" fill="url(#vg)"/>
 </svg>
