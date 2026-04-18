@@ -143,11 +143,11 @@
     <g class="hue">
       <text class="ascii r1" x="0" y="0">╭──────────────────────────────────────────────────────────────────╮</text>
       <text class="ascii r2" x="0" y="18">│                                                                  │</text>
-      <text class="ascii r3" x="0" y="36">│      __   _____ _____ _   _ _____  _    _                       │</text>
-      <text class="ascii r4" x="0" y="54">│      \ \ / / __| ____| \ | |_   _|/ \  | |                      │</text>
-      <text class="ascii r5" x="0" y="72">│       \ V / |   |  _| |  \| | | | / _ \ | |                      │</text>
-      <text class="ascii r6" x="0" y="90">│        | || |__ | |___| |\  | | |/ ___ \| |___                   │</text>
-      <text class="ascii r7" x="0" y="108">│        |_| \___||_____|_| \_| |_/_/   \_\_____|                  │</text>
+      <text class="ascii r3" x="0" y="36">│    __   __   ____   _____  _   _  _____     _                   │</text>
+      <text class="ascii r4" x="0" y="54">│    \ \ / /  / ___| | ____|| \ | ||_   _|   / \                  │</text>
+      <text class="ascii r5" x="0" y="72">│     \ V /  | |     |  _|  |  \| |  | |    / _ \                 │</text>
+      <text class="ascii r6" x="0" y="90">│      | |   | |___  | |___ | |\  |  | |   / ___ \                │</text>
+      <text class="ascii r7" x="0" y="108">│      |_|    \____| |_____||_| \_|  |_|  /_/   \_\               │</text>
       <text class="ascii r8" x="0" y="126">│                                                                  │</text>
       <text class="ascii r9" x="0" y="144">╰─── creative dev · apps · games · hardware · made in FR 🥖 ──────╯</text>
     </g>
