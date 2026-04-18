@@ -1,27 +1,34 @@
-<div align="center">
+```
+                          _        
+  _   _  ___ ___ _ __ | |_ __ _ 
+ | | | |/ __/ _ \ '_ \| __/ _` |
+ | |_| | (_|  __/ | | | || (_| |
+  \__, |\___\___|_| |_|\__\__,_|
+  |___/                          
+```
 
-# Hey there! I'm Yohan 👋
+<div align="center">
 
 **Creative Developer · Builder of Things · Maker at Heart**
 
-[![Portfolio](https://img.shields.io/badge/🌐_Portfolio-cv.ycenta.fr-blue?style=for-the-badge)](https://cv.ycenta.fr/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-cv.ycenta.fr-blue?style=for-the-badge)](https://cv.ycenta.fr/)
 [![GitHub](https://img.shields.io/badge/GitHub-ycenta-181717?style=for-the-badge&logo=github)](https://github.com/ycenta)
 
 </div>
 
 ---
 
-### 🧑‍💻 About Me
+### About Me
 
-- 🔭 I love building **apps, games, and creative tools**
-- ⚡ I work across the full stack — from **frontend** to **hardware**
-- 🎮 Game dev enthusiast (Unity, GDScript, even NDS homebrew!)
-- 🦀 Currently exploring **Rust** and **Tauri**
-- 🇫🇷 Based in France
+- I love building **apps, games, and creative tools**
+- I work across the full stack — from **frontend** to **hardware**
+- Game dev enthusiast (Unity, GDScript, even NDS homebrew!)
+- Currently exploring **Rust** and **Tauri**
+- Based in France
 
 ---
 
-### 🛠️ Tech Stack
+### Tech Stack
 
 <div align="center">
 
@@ -42,32 +49,25 @@
 
 ---
 
-### 📊 GitHub Stats
+### Most Used Languages
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=ycenta&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ycenta&layout=compact&theme=tokyonight&hide_border=true" />
-
-</div>
-
-<div align="center">
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=ycenta&theme=tokyonight&hide_border=true" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ycenta&layout=compact&theme=tokyonight&hide_border=true" />
 
 </div>
 
 ---
 
-### 🚀 Highlighted Projects
+### Highlighted Projects
 
 | Project | Description |
 |---------|-------------|
-| [🃏 Cards of Artists](https://github.com/ycenta/cardsofartistv3) | A TCG-style creative project |
-| [📺 Twitch Chat Unity](https://github.com/ycenta/twitch-chat-unity) | Twitch chat integration for Unity |
-| [🖥️ Sticky App](https://github.com/ycenta/sticky-app) | A sticky notes desktop app |
-| [⏱️ FocusFlow](https://github.com/ycenta/focusflow) | Productivity & focus tool |
-| [🎮 Among Us NDS](https://github.com/ycenta/amongus-nds-game) | Among Us homebrew on Nintendo DS |
+| [Cards of Artists](https://github.com/ycenta/cardsofartistv3) | A TCG-style creative project |
+| [Twitch Chat Unity](https://github.com/ycenta/twitch-chat-unity) | Twitch chat integration for Unity |
+| [Sticky App](https://github.com/ycenta/sticky-app) | A sticky notes desktop app |
+| [FocusFlow](https://github.com/ycenta/focusflow) | Productivity & focus tool |
+| [Among Us NDS](https://github.com/ycenta/amongus-nds-game) | Among Us homebrew on Nintendo DS |
 
 ---
 
