@@ -68,18 +68,6 @@
 
 ---
 
-### Playground
-
-<div align="center">
-
-[<img src="./assets/pixel-cat.svg" alt="Interactive pixel cat — click to play" width="280" />](./assets/pixel-cat.svg)
-
-*Click the cat to open the interactive version — hover each pixel!*
-
-</div>
-
----
-
 <div align="center">
 
 <img src="https://komarev.com/ghpvc/?username=ycenta&style=flat-square&color=6366f1" />
